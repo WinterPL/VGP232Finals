@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<HERO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <type>hero</type>
+  <SkillP>
+    <Name />
+    <Description />
+  </SkillP>
+  <Skill1>
+    <Name />
+    <Description />
+  </Skill1>
+  <Skill2>
+    <Name />
+    <Description />
+  </Skill2>
+  <Skill3>
+    <Name />
+    <Description />
+  </Skill3>
+  <ULT>
+    <Name />
+    <Description />
+  </ULT>
+  <Name />
+  <Origin />
+  <kind />
+  <sex />
+  <Appearence />
+  <Description />
+</HERO>
