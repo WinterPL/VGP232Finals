@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<HERO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <type>hero</type>
+  <SkillP>
+    <Name>ILLUMINATION</Name>
+    <Description>Lux's damaging spells charge the target with energy for a few seconds. Lux's next attack ignites the energy, dealing bonus magic damage (depending on Lux's level) to the target.</Description>
+  </SkillP>
+  <Skill1>
+    <Name>LIGHT BINDING</Name>
+    <Description>Lux releases a sphere of light that binds and deals damage to up to two enemy units.</Description>
+  </Skill1>
+  <Skill2>
+    <Name>PRISMATIC BARRIER</Name>
+    <Description>Lux throws her wand and bends the light around any friendly target it touches, protecting them from enemy damage.</Description>
+  </Skill2>
+  <Skill3>
+    <Name>LUCENT SINGULARITY</Name>
+    <Description>Fires an anomaly of twisted light to an area, which slows nearby enemies. Lux can detonate it to damage enemies in the area of effect.</Description>
+  </Skill3>
+  <ULT>
+    <Name>FINAL SPARK</Name>
+    <Description>After gathering energy, Lux fires a beam of light that deals damage to all targets in the area. In addition, triggers Lux's passive ability and refreshes the Illumination debuff duration.</Description>
+  </ULT>
+  <Name>Luxanna &lt;LUX&gt; Crownguard</Name>
+  <Origin>Demacia</Origin>
+  <kind>Human</kind>
+  <sex>Female</sex>
+  <Appearence>-Lux is a short, pale-skinned young woman with blue eyes and shoulder-length large blonde hair, on top of which she always wears a dark blue headband on her head.
+
+-While she generally wears typical noble attire in public, she is primarily seen in Demacian armor with a silver-white breastplate and skirt, dark blue leggings covering her legs and arms, white heeled boots to match her skirt and breastplate.
+
+-When Lux uses her magic, her eyes can sometimes change from blue to bright gold.</Appearence>
+  <Description>Lux presents an energetic and optimistic disposition, being happy and finding humor all the time. However, in more serious situations, Lux's facade drops and she turns out to be constrained and worried about her magic and being found out. She wishes for mages to be accepted in Demacia and opposes the Mageseekers' prosecution of them just because of their powers, sympathizing with Sylas for being unfairly imprisoned. When he betrayed her and started the rebellion, Lux saw him as the danger he truly was, though since the rebellion she has decided to help innocent mages secretly escape Demacia and join Sylas' camp, since being under his rule would be better than being trapped in a nation which saw them only as criminals.
+
+Relationship//
+-Lux is the youngest in noble family Crownguard, born with magical abilities she keeps hidden for fear of being executed or exiled from Demacia.
+-Lux feared of what could happen if her older brother Garen Garen found out about her powers (their uncle was killed by a mage, an event that made Garen show magic users both zero tolerance and no mercy). She believed their mother was the only one who knew, however, she had no idea that Garen and their aunt Tianna Tianna had realized that she was a mage several years earlier, and were thinking of ways to protect her.
+Although they are aware of her power, they were somewhat in denial of Lux being a mage herself.
+After the events of the Lux comic, Lux got Garen to verbally acknowledge that she was a mage. The two parted ways on good terms.
+-Galio Galio deems Lux 'the only mage he likes' (    "You. Young girl person. Can you stay and accompany me wherever I go?") and the one that can help him attain prolonged animation periods longer than a single battle.
+Lux was apparently the first person to have a conversation with Galio when she was 13-years-old, but he first became aware of her when her family made a pilgrimage to see him when she was a toddler.
+-During the events of Warriors, Lux would make an appearance during Sylas' attack with the Winter's Claw on a northern fortress, which Garen and his soldiers had retreated to. When things were going badly for the Demacians, she openly reveals her magical power to call for Galio's help, which rallied Garen and his men.
+Garen and Luxanna's father, Pieter Crownguard, was a defender during the failed Noxian assault nicknamed Cyrus's Folly. This is likely referring to the same Cyrus who conquered the port city Basilich, which also happens to be the hometown of Darius -Darius and Draven Draven.
+-Lux was introduced to the Illuminator Crest icon.png Illuminators by Kahina, Sona's Sona's adoptive sister.
+-Lux met Sylas Sylas when he's in prison. They developed certain bonds during their exchange, while Lux brought him food and books, Sylas taught her how to control her power. Later, Lux was manipulated and used by Sylas Sylas to escape Demacian imprisonment after he learnt about the property of petricite thanks to her.
+Sylas genuinely cares about Lux, but will not hesitate to harm her if she stops in his way.
+Lux, in turn, is also ready to stop him if necessary.
+-Lux was intended to marry Jarvan IV Jarvan IV Lightshield as suggested by her brother Garen Garen and her aunt Tianna Tianna, in order to gain political immunity that would protect her of any controversial accusations that would otherwise damage her and her family's reputation in Demacia.
+-Nocturne Nocturne terrorized the Demacian settlement of Fossbarrow until Garen Garen and Lux Lux expelled him from the neighboring tomb.
+Nocturne was sealed in the grave of their great-grandfather Fossian, who died during the fight versus him, before a young mage named Luca accidentally woke him up.
+-Ezreal Ezreal has fallen unrequited in love with her . However, Lux barely knows him.
+Zoe Zoe sees Lux Lux as a rival since she has a crush on Ezreal Ezreal.
+In the old lore, Lux Lux and Ezreal Ezreal were strongly hinted to be dating.
+They are hinted to also have feelings for each other in alternative universes like Star Guardian and Battle Academia.</Description>
+</HERO>

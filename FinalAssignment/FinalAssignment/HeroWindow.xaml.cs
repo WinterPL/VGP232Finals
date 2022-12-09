@@ -7,23 +7,25 @@ using Documentformat;
 namespace FinalAssignment
 {
 
-    public partial class MainWindow : Window
+    public partial class HeroWindow : Window
     {
-        public NCharacter nCharacter = new NCharacter();
-        public MainWindow()
+        public HERO nCharacter = new HERO();
+        public HeroWindow()
         {
             InitializeComponent();
         }
 
         private void New_Click(object sender, RoutedEventArgs e)
         {
-            if (Name.Text == "" && origin.Text == "" && Kind.Text == "" && Sex.Text == "" && appearence.Text == "" && Description.Text == "")
+
+            if (Name.Text == "" && origin.Text == "" && Kind.Text == "" && Sex.Text == "" && appearence.Text == "" && SkillPName.Text == "" && SkillPdesc.Text == "" && Description.Text == "" && Skill1Name.Text == "" && Skill1desc.Text == "" && Skill2Name.Text == "" &&
+          Skill2desc.Text == "" && Skill3Name.Text == "" && Skill3desc.Text == "" && Skill4Name.Text == "" && Skill4desc.Text == "")
             {
-                
+
             }
             else
             {
-                string messageBoxText = "Do you want to save changes?";
+                    string messageBoxText = "Do you want to save changes?";
                 string caption = "Save";
                 MessageBoxButton button = MessageBoxButton.YesNoCancel;
                 MessageBoxImage icon = MessageBoxImage.Warning;
@@ -52,7 +54,7 @@ namespace FinalAssignment
         }
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            SaveButton_Click(sender,e);
+            SaveButton_Click(sender, e);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
@@ -67,13 +69,23 @@ namespace FinalAssignment
             nCharacter.sex = Sex.Text;
             nCharacter.Appearence = appearence.Text;
             nCharacter.Description = Description.Text;
+            nCharacter.SkillP.Name = SkillPName.Text;
+            nCharacter.SkillP.Description = SkillPdesc.Text;
+            nCharacter.Skill1.Name = Skill1Name.Text;
+            nCharacter.Skill1.Description = Skill1desc.Text;
+            nCharacter.Skill2.Name = Skill2Name.Text;
+            nCharacter.Skill2.Description = Skill2desc.Text;
+            nCharacter.Skill3.Name = Skill3Name.Text;
+            nCharacter.Skill3.Description = Skill3desc.Text;
+            nCharacter.ULT.Name = Skill4Name.Text;
+            nCharacter.ULT.Description = Skill4desc.Text;
 
             Microsoft.Win32.SaveFileDialog saveFileDialog = new Microsoft.Win32.SaveFileDialog();
             saveFileDialog.Filter = "Xml files (*.xml)|*.xml";
             if (saveFileDialog.ShowDialog() == true)
                 using (FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.Append))
                 {
-                    XmlSerializer xs = new XmlSerializer(typeof(NCharacter));
+                    XmlSerializer xs = new XmlSerializer(typeof(HERO));
                     xs.Serialize(fs, nCharacter);
                 }
         }
@@ -89,11 +101,11 @@ namespace FinalAssignment
             {
                 using (FileStream fs = new FileStream(dlg.FileName, FileMode.OpenOrCreate))
                 {
-                    XmlSerializer xs = new XmlSerializer(typeof(NCharacter));
+                    XmlSerializer xs = new XmlSerializer(typeof(HERO));
                     try
                     {
-                        nCharacter = new NCharacter();
-                        nCharacter = (NCharacter)xs.Deserialize(fs);
+                        nCharacter = new HERO();
+                        nCharacter = (HERO)xs.Deserialize(fs);
                     }
                     catch (Exception ex)
                     {
@@ -106,8 +118,8 @@ namespace FinalAssignment
                         switch (resultW)
                         {
                             case MessageBoxResult.Yes:
-                                HeroWindow HeroW = new HeroWindow();
-                                HeroW.Show();
+                                MainWindow NormW = new MainWindow();
+                                NormW.Show();
                                 this.Close();
                                 break;
                             case MessageBoxResult.No:
@@ -115,47 +127,57 @@ namespace FinalAssignment
                         }
                     }
 
-                }
 
-                Name.Text = nCharacter.Name;
-                origin.Text = nCharacter.Origin;
-                Kind.Text = nCharacter.kind;
-                Sex.Text = nCharacter.sex;
-                appearence.Text = nCharacter.Appearence;
-                Description.Text = nCharacter.Description;
-                Title = "CharacterDocument - " + dlg.Title;
+                }
             }
+            Name.Text = nCharacter.Name;
+            origin.Text = nCharacter.Origin;
+            Kind.Text = nCharacter.kind;
+            Sex.Text = nCharacter.sex;
+            appearence.Text = nCharacter.Appearence;
+            SkillPName.Text = nCharacter.SkillP.Name;
+            SkillPdesc.Text = nCharacter.SkillP.Description;
+            Description.Text = nCharacter.Description;
+            Skill1Name.Text = nCharacter.Skill1.Name;
+            Skill1desc.Text = nCharacter.Skill1.Description;
+            Skill2Name.Text = nCharacter.Skill2.Name;
+            Skill2desc.Text = nCharacter.Skill2.Description;
+            Skill3Name.Text = nCharacter.Skill3.Name;
+            Skill3desc.Text = nCharacter.Skill3.Description;
+            Skill4Name.Text = nCharacter.ULT.Name;
+            Skill4desc.Text = nCharacter.ULT.Description;
+            Title = "CharacterDocument - " + dlg.Title;
         }
 
-        private void Change2Hero(object sender, RoutedEventArgs e)
+        private void Change2Normal(object sender, RoutedEventArgs e)
         {
-            if (Name.Text == "" && origin.Text == "" && Kind.Text == "" && Sex.Text == "" && appearence.Text == "" && Description.Text == "")
+            if (Name.Text == ""&&origin.Text == ""&&Kind.Text == ""&&Sex.Text == ""&&appearence.Text == "" &&SkillPName.Text == "" &&SkillPdesc.Text == "" &&Description.Text == "" &&Skill1Name.Text == "" &&Skill1desc.Text == "" &&Skill2Name.Text == "" &&
+            Skill2desc.Text == "" &&Skill3Name.Text == "" &&Skill3desc.Text == "" &&Skill4Name.Text == "" &&Skill4desc.Text == "")
             {
-                HeroWindow HeroW = new HeroWindow();
-                HeroW.Show();
+                MainWindow NormW = new MainWindow();
+                NormW.Show();
                 this.Close();
             }
-            else { 
-
-                    string messageBoxText = "Do you Want to save before change the Window ? ";
+            else {
+                string messageBoxText = "Do you Want to save before change the Window?";
                 string caption = "Window Change";
                 MessageBoxButton button = MessageBoxButton.YesNoCancel;
                 MessageBoxImage icon = MessageBoxImage.Warning;
                 MessageBoxResult result;
 
                 result = System.Windows.MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
-                HeroWindow HeroW = new HeroWindow();
+                MainWindow NormW = new MainWindow();
                 switch (result)
                 {
                     case MessageBoxResult.Cancel:
                         break;
                     case MessageBoxResult.Yes:
                         Save_Click(sender, e);
-                        HeroW.Show();
+                        NormW.Show();
                         this.Close();
                         break;
                     case MessageBoxResult.No:
-                        HeroW.Show();
+                        NormW.Show();
                         this.Close();
                         break;
                 }
@@ -172,7 +194,16 @@ namespace FinalAssignment
             Sex.Text = "";
             appearence.Text = "";
             Description.Text = "";
+            SkillPName.Text = "";
+            SkillPdesc.Text = "";
+            Skill1Name.Text = "";
+            Skill1desc.Text = "";
+            Skill2Name.Text = "";
+            Skill2desc.Text = "";
+            Skill3Name.Text = "";
+            Skill3desc.Text = "";
+            Skill4Name.Text = "";
+            Skill4desc.Text = "";
         }
-
     }
 }
