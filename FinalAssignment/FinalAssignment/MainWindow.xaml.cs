@@ -97,12 +97,12 @@ namespace FinalAssignment
 
         private void setAllblank()
         {
-            nCharacter.Name = " ";
-            nCharacter.Origin = " ";
-            nCharacter.kind = " ";
-            nCharacter.sex = " ";
-            nCharacter.Appearence = " ";
-            nCharacter.Description = " ";
+            Name.Text = "";
+            origin.Text = "";
+            Kind.Text = "";
+            Sex.Text = "";
+            appearence.Text = "";
+            Description.Text = "";
         }
     }
 }
