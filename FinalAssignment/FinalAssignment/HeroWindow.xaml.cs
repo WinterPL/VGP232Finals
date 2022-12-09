@@ -18,14 +18,9 @@ namespace FinalAssignment
         private void New_Click(object sender, RoutedEventArgs e)
         {
 
-            if (Name.Text == "" && origin.Text == "" && Kind.Text == "" && Sex.Text == "" && appearence.Text == "" && SkillPName.Text == "" && SkillPdesc.Text == "" && Description.Text == "" && Skill1Name.Text == "" && Skill1desc.Text == "" && Skill2Name.Text == "" &&
-          Skill2desc.Text == "" && Skill3Name.Text == "" && Skill3desc.Text == "" && Skill4Name.Text == "" && Skill4desc.Text == "")
+            if (!checkspace())
             {
-
-            }
-            else
-            {
-                    string messageBoxText = "Do you want to save changes?";
+                string messageBoxText = "Do you want to save changes?";
                 string caption = "Save";
                 MessageBoxButton button = MessageBoxButton.YesNoCancel;
                 MessageBoxImage icon = MessageBoxImage.Warning;
@@ -151,8 +146,7 @@ namespace FinalAssignment
 
         private void Change2Normal(object sender, RoutedEventArgs e)
         {
-            if (Name.Text == ""&&origin.Text == ""&&Kind.Text == ""&&Sex.Text == ""&&appearence.Text == "" &&SkillPName.Text == "" &&SkillPdesc.Text == "" &&Description.Text == "" &&Skill1Name.Text == "" &&Skill1desc.Text == "" &&Skill2Name.Text == "" &&
-            Skill2desc.Text == "" &&Skill3Name.Text == "" &&Skill3desc.Text == "" &&Skill4Name.Text == "" &&Skill4desc.Text == "")
+            if (checkspace())
             {
                 MainWindow NormW = new MainWindow();
                 NormW.Show();
@@ -162,7 +156,7 @@ namespace FinalAssignment
                 string messageBoxText = "Do you Want to save before change the Window?";
                 string caption = "Window Change";
                 MessageBoxButton button = MessageBoxButton.YesNoCancel;
-                MessageBoxImage icon = MessageBoxImage.Warning;
+                MessageBoxImage icon = MessageBoxImage.Question;
                 MessageBoxResult result;
 
                 result = System.Windows.MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
@@ -204,6 +198,16 @@ namespace FinalAssignment
             Skill3desc.Text = "";
             Skill4Name.Text = "";
             Skill4desc.Text = "";
+        }
+
+        private bool checkspace()
+        {
+            if (Name.Text == "" && origin.Text == "" && Kind.Text == "" && Sex.Text == "" && appearence.Text == "" && SkillPName.Text == "" && SkillPdesc.Text == "" && Description.Text == "" && Skill1Name.Text == "" && Skill1desc.Text == "" && Skill2Name.Text == "" &&
+            Skill2desc.Text == "" && Skill3Name.Text == "" && Skill3desc.Text == "" && Skill4Name.Text == "" && Skill4desc.Text == "")
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

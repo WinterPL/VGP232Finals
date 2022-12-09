@@ -17,11 +17,7 @@ namespace FinalAssignment
 
         private void New_Click(object sender, RoutedEventArgs e)
         {
-            if (Name.Text == "" && origin.Text == "" && Kind.Text == "" && Sex.Text == "" && appearence.Text == "" && Description.Text == "")
-            {
-                
-            }
-            else
+            if (!checkspace())
             {
                 string messageBoxText = "Do you want to save changes?";
                 string caption = "Save";
@@ -100,7 +96,7 @@ namespace FinalAssignment
                         string messageBoxText = "Different Type of Character. Do you want to change a window to a suitable type?";
                         string caption = "WARNING";
                         MessageBoxButton button = MessageBoxButton.YesNo;
-                        MessageBoxImage icon = MessageBoxImage.Warning;
+                        MessageBoxImage icon = MessageBoxImage.Question;
                         MessageBoxResult resultW;
                         resultW = System.Windows.MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
                         switch (resultW)
@@ -129,7 +125,7 @@ namespace FinalAssignment
 
         private void Change2Hero(object sender, RoutedEventArgs e)
         {
-            if (Name.Text == "" && origin.Text == "" && Kind.Text == "" && Sex.Text == "" && appearence.Text == "" && Description.Text == "")
+            if (checkspace())
             {
                 HeroWindow HeroW = new HeroWindow();
                 HeroW.Show();
@@ -172,6 +168,15 @@ namespace FinalAssignment
             Sex.Text = "";
             appearence.Text = "";
             Description.Text = "";
+        }
+
+        private bool checkspace()
+        {
+            if (Name.Text == "" && origin.Text == "" && Kind.Text == "" && Sex.Text == "" && appearence.Text == "" && Description.Text == "" )
+            {
+                return true;
+            }
+            return false;
         }
 
     }
