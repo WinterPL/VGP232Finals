@@ -102,7 +102,7 @@ namespace FinalAssignment
                         nCharacter = new HERO();
                         nCharacter = (HERO)xs.Deserialize(fs);
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         string messageBoxText = "Different Type of Character. Do you want to change a window to a suitable type?";
                         string caption = "WARNING";
@@ -141,7 +141,7 @@ namespace FinalAssignment
             Skill3desc.Text = nCharacter.Skill3.Description;
             Skill4Name.Text = nCharacter.ULT.Name;
             Skill4desc.Text = nCharacter.ULT.Description;
-            Title = "CharacterDocument - " + dlg.Title;
+            Title = "CharacterDocument - " + dlg.FileName.ToString();
         }
 
         private void Change2Normal(object sender, RoutedEventArgs e)

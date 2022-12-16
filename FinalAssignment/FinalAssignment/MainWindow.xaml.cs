@@ -91,12 +91,12 @@ namespace FinalAssignment
                         nCharacter = new NCharacter();
                         nCharacter = (NCharacter)xs.Deserialize(fs);
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         string messageBoxText = "Different Type of Character. Do you want to change a window to a suitable type?";
                         string caption = "WARNING";
                         MessageBoxButton button = MessageBoxButton.YesNo;
-                        MessageBoxImage icon = MessageBoxImage.Question;
+                        MessageBoxImage icon = MessageBoxImage.Warning;
                         MessageBoxResult resultW;
                         resultW = System.Windows.MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
                         switch (resultW)
@@ -119,7 +119,7 @@ namespace FinalAssignment
                 Sex.Text = nCharacter.sex;
                 appearence.Text = nCharacter.Appearence;
                 Description.Text = nCharacter.Description;
-                Title = "CharacterDocument - " + dlg.Title;
+                Title = "CharacterDocument - " + dlg.FileName.ToString();
             }
         }
 

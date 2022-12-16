@@ -9,7 +9,6 @@ namespace Documentformat
     
     public class NCharacter
     {
-        public string type = "normal";
         public string Name { get; set; } = string.Empty;
         public string Origin { get; set; } = string.Empty;
         public string kind { get; set; } = string.Empty;

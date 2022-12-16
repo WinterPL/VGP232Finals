@@ -13,7 +13,6 @@ namespace Documentformat
     }
     public class HERO
     {
-        public string type = "hero";
         public string Name { get; set; } = string.Empty;
         public string Origin { get; set; } = string.Empty;
         public string kind { get; set; } = string.Empty;
